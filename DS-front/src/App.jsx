@@ -1,12 +1,10 @@
 import './App.css'
-
+import HelloLandingPage from './components/HelloLandingPage/HelloLandingPage.jsx';
 function App() {
 
   return (
     <>
-    <div className="container">
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, facere!</h1>
-    </div>
+      <HelloLandingPage />
     </>
   )
 }

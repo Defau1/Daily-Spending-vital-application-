@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #c8e8ff;
+  --base-color: #f0f2f5;
+  --dark-color: #303841;
+  --light-color: #e8eaed;
+  --danger-color: #d64045;
+  --success-color: #4caf50;
+  --social-color: #3b82f6;
+  --warning-color: #ffc107;
+  --text-color: #444;
+  --border-color: #d1d5db;
+  --focus-color: #53a3ff;
+  --focus-shadow: rgba(59, 130, 246, 0.25);
+}

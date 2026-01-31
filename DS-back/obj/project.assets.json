@@ -80,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/DS-back.csproj",
+      "projectUniqueName": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/DS-back.csproj",
       "projectName": "DS-back",
-      "projectPath": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/DS-back.csproj",
+      "projectPath": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/DS-back.csproj",
       "packagesPath": "/Users/anthony/.nuget/packages/",
-      "outputPath": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/obj/",
+      "outputPath": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/anthony/.nuget/NuGet/NuGet.Config"
