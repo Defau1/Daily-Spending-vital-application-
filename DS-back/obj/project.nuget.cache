@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wzyHnZaid3k=",
+  "success": true,
+  "projectFilePath": "/Users/anthony/Desktop/Учёба/It Training/Daily spending (React+CS)/DS-back/DS-back.csproj",
+  "expectedPackageFiles": [
+    "/Users/anthony/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/Users/anthony/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

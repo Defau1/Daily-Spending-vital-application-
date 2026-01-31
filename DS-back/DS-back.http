@@ -1,0 +1,6 @@
+@DS_back_HostAddress = http://localhost:5062
+
+GET {{DS_back_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
