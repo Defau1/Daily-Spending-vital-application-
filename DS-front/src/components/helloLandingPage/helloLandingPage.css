@@ -1,4 +1,4 @@
-header {
+.header {
     display: flex;
     justify-content: space-between;
     padding: 30px;
@@ -34,7 +34,7 @@ header {
     }
 }
 
-body {
+.body {
     .info-block {
         background-color: var(--base-color);
         width: 60%;
@@ -89,7 +89,7 @@ body {
     }
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: space-between;
     padding: 30px;

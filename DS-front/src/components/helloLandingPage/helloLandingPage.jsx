@@ -3,24 +3,27 @@ import WillRodjers from '../../assets/Will_Rodjers.jpg';
 import { FaGithub } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-
+import { ImEnter } from "react-icons/im";
+import { Link } from 'react-router-dom';
 
 function HelloLandingPage() {
 
     return(
         <>
         
-            <header>
+            <div className='header'>
                 <div className="logo-text">
                     <p>Daily Spending</p>
                 </div>
                 
                 <div className="register-button">
-                    <button>Регистрация</button>
+                    <Link to='/register-page'>
+                        <button>Регистрация<ImEnter size={20} /></button>
+                    </Link>
                 </div>
-            </header>
+            </div>
 
-            <body>
+            <div className='body'>
                 <div className="info-block">
                     <h1>Добро пожаловать в приложение для отслеживания ежедневных расходов - Daily Spending!</h1>
                     <p><strong>Daily Spending</strong> — ваш надежный помощник в управлении личными финансами. 
@@ -28,7 +31,8 @@ function HelloLandingPage() {
                         финансовые привычки и контролировать бюджет в реальном времени. 
                         Простой и понятный интерфейс позволяет быстро вносить траты, видеть 
                         наглядную статистику и планировать будущие покупки. Достигайте финансовых 
-                        целей, экономьте с умом и живите с уверенностью в завтрашнем дне вместе с Daily Spending.
+                        целей, экономьте с умом и живите с уверенностью в завтрашнем дне вместе с Daily Spending. <br />
+                        Нажмите кнопку "Регистрация" и начните управлять своими финансами - <strong>Выгодно !</strong>
                     </p>
                 </div>
 
@@ -55,9 +59,9 @@ function HelloLandingPage() {
                     </div>
                 </div>
 
-            </body>
+            </div>
 
-            <footer>
+            <div className='footer'>
                 <div className="copyright">
                     <p>Сайт курируется мной и только мной. Все права защищены 2026 ©</p>
                 </div>
@@ -74,7 +78,7 @@ function HelloLandingPage() {
                         <a href="https://www.linkedin.com/in/default-tony/"><FaLinkedin /></a>
                     </div>
                 </div>
-            </footer>
+            </div>
 
         </>
     )
