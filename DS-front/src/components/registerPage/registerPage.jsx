@@ -31,6 +31,8 @@ function RegisterPage() {
 
         setSubmitted(true)
 
+        navigate('/login-page')
+
 
     //     fetch('https://your-api.com/register', {
     //     method: 'POST',
