@@ -53,8 +53,36 @@ function LoginPage() {
                     </div>
                 )}
 
+                <div className={`form-control ${errors.nickname ? 'invalid' : '' }`}>
+
+                    <label htmlFor="nickname">Введите имя</label>
+                    <input 
+                    type="text"
+                    placeholder='Anna' 
+                    id='nickname'
+                    {...register('nickname', {
+                        required: true
+                    })}
+                    />
+
+                    {errors.nickname && (
+                        <div className="validation">
+
+                            {errors.nickname.type === 'required' && (
+
+                                <small>
+                                    Введите имя
+                                </small>
+
+                            )}
+
+                        </div>
+                    )}
+
+                </div>
+
                 <div className={`form-control ${errors.email ? 'invalid' : ''}`}>
-                    <label htmlFor="email">Введите вашу почту</label>
+                    <label htmlFor="email">Введите свою почту</label>
                     <input 
                     type="email" 
                     placeholder='email@gmail.com'
