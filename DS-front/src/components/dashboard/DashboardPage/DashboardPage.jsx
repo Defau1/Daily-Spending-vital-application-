@@ -13,41 +13,64 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
     icon,
     children,
-    label,
+    label
   };
 }
 const items = [
-  getItem('Дешборд', '1', <PieChartOutlined />),
-  getItem('Новая трата', '2', <AppstoreAddOutlined />),
-  getItem('История', '3', <SlidersOutlined />),
-  getItem('Категории', '4', <RadarChartOutlined />),
-  getItem('Аналитика', '5', <LineChartOutlined />),
-  getItem('Бюджеты', '6', <DollarOutlined />),
-  getItem('Личный кабинет', '7', <SettingOutlined />),
-//   getItem('User', 'sub1', <UserOutlined />, [
-//     getItem('Tom', '3'),
-//     getItem('Bill', '4'),
-//     getItem('Alex', '5'),
-//   ]),
-//   getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-//   getItem('Files', '9', <FileOutlined />),
+  getItem('Дешборд', 'dashboard', <PieChartOutlined />),
+  getItem('Новая трата', 'spending', <AppstoreAddOutlined />),
+  getItem('История', 'history', <SlidersOutlined />),
+  getItem('Категории', 'category', <RadarChartOutlined />),
+  getItem('Аналитика', 'analytic', <LineChartOutlined />),
+  getItem('Бюджеты', 'budget', <DollarOutlined />),
+  getItem('Личный кабинет', 'account', <SettingOutlined />),
 ];
+
+const paths = {
+  dashboard: '/dashboard-page',
+  spending: '/dashboard-page/spending',
+  history: '/dashboard-page/history',
+  category: '/dashboard-page/category',
+  analytic: '/dashboard-page/analytic',
+  budget: '/dashboard-page/budget',
+  account: '/dashboard-page/account',
+};
+
 const DashboardPage = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const getSelectedKey = () => {
+    const path = location.pathname
+    return Object.keys(paths).find(key => paths[key] === path) || 'dashboard';
+  }
+
+  const handleMenuClick = ({key}) => {
+    navigate(paths[key])
+  }
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={value => setCollapsed(value)}>
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        <Menu 
+        theme="dark" 
+        selectedKeys={[getSelectedKey()]} 
+        mode="inline" 
+        items={items} 
+        onSelect={handleMenuClick}
+        />
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }} />
@@ -61,7 +84,7 @@ const DashboardPage = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
